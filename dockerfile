@@ -1,5 +1,5 @@
 ARG VERSION=latest
-FROM httpd:$VERSION
-COPY K8.txt \karma
+FROM ubuntu:$VERSION
 
-RUN 
+
+RUN apt-get update
