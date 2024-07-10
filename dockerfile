@@ -1,7 +1,5 @@
-FROM learnitguide/busapp:base
+ARG VERSION=latest
+FROM httpd:$VERSION
+COPY K8.txt /karma
 
-COPY busapp-webapp/ /usr/src/busapp-webapp/
-
-WORKDIR /usr/src/busapp-webapp
-
-CMD pm2-docker serve.js --machine-name $MACHINE_NAME
+RUN 
