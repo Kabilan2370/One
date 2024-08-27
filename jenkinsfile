@@ -1,0 +1,16 @@
+pipeline {
+  agent {
+      dockerfile {
+            filename 'dockerfile'
+            addtionalBuildArgs '--build-arg version=2.1'
+            args '-v /tmp:/tmp'
+      }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker images'
+            }
+      }
+}
+}
+}
