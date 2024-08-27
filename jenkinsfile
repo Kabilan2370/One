@@ -1,5 +1,5 @@
 pipeline {
-  agent {
+  agent any {
       dockerfile {
             filename 'dockerfile'
             addtionalBuildArgs '--build-arg version=2.1'
