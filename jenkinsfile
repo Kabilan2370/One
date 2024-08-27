@@ -3,6 +3,7 @@ pipeline {
       dockerfile {
             filename 'dockerfile'
             additionalBuildArgs '--build-arg version=2.1'
+            labels 'v6'
             args '-v /tmp:/tmp'
       }
 }
